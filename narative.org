@@ -4,13 +4,13 @@
 
 "I'll see what *Argus* says about video possibilities while you pour the wine.", he replies.
 
-Paul then brings up the *Argus* app on the first device that he finds, an iPad on the coffee table.  Using his Active List, Paul sees that the /Vikings/ is at the last episode of season five on Amazon and season four of /A Place to Call Home/ on Acorn TV is a good second choice for tonight's streaming pleasures.
+Paul then brings up the *Argus* app on the first device that he finds, an iPad on the coffee table.  Using his Active List, Paul sees that the /Vikings/ is at the last episode of season five on Amazon and season four, episode one of /A Place to Call Home/ on Acorn TV is a good second choice for tonight's streaming pleasures.
 
 While Sandy is waiting for dinner to heat up she brings up *Argus* on her Pixel 3 XL phone and discovers on her list that /Poldark/ is now available on PBS.
 
-So now it is settled, /Poldark/ series 5 episode 1 and /A Place to Call/ Home season four episode 1.
+So now it is settled, /Poldark/ series 5 episode 1 and /A Place to Call Home/ season four episode 1.
 
-Paul switches to Sandy's List on his iPad and chooses Watch from the /Poldark/ menu. The PBS app is started with the Chromecast for the Living Room and automagically selects the right episode. Paul hits pause to wait for Sandy.
+Paul switches to Sandy's List on his iPad and chooses Watch from the /Poldark/ menu. The PBS app is started on the Living Room Chromecast and automagically selects the right episode. Paul hits pause to wait for Sandy.
 
 After dinner and a refresh on the merlot, Paul switches back to *Argus* with his list and selects the Watch menu item for /A Place to Call Home/. A new character appears shortly into the episode piqueing his curiosity, "where have we seen her before", he asks outloud.  Sandy grabs her phone and switches to Paul's List and selects Episode Info menu item for /A Place to Call Home/. She taps on the Cast card and is presented with a list of actors and actresses for this episode. Recognizing the actress she clicks on the filmography link and quickly learns that it was Game of Thrones where the actress had a bit part.
 
@@ -18,4 +18,4 @@ And so it goes ...
 
 * The Status
 
-That short story was the vision that led to the *Argus* concept.  The complete realization of the vision is still a ways off but *Argus* does exist in the Android Play store (but not the App store yet) and new features are being added daily.
+That short story was the vision that led to the *Argus* concept.  The complete realization of the vision is still a ways off but *Argus* does exist in the Android Play store (but not the App store yet) and new features are being added daily. Stay tuned ...
