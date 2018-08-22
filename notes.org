@@ -1,6 +1,5 @@
 * High Level Component Structure Diagram
 #+begin_src plantuml :file structure.png
-caption Figure 1: High level component structure
 title Argus Clean Application Structure
 
 legend top right
@@ -64,6 +63,7 @@ note bottom of [CoreXXX] : TBD Use Cases
 note left of [Test] : Temp TDD\nsupport classes
 note left of [iosGUI] : MVP
 note right of [androidGUI] : MVVM
+
 #+end_src
 
 #+RESULTS:
