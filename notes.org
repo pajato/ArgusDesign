@@ -1,0 +1,70 @@
+* High Level Component Structure Diagram
+#+begin_src plantuml :file structure.png
+caption Figure 1: High level component structure
+title Argus Clean Application Structure
+
+legend top right
+<i>Layers Legend</i>
+
+| |= Layer Name |
+|<back:#B0D6F9>    </back>| Frameworks & Drivers |
+|<back:#B7FAC0>    </back>| Interface Adapters |
+|<back:#F2A49F>    </back>| Use Cases |
+|<back:#F9F8BF>    </back>| Entities |
+endlegend
+
+[iOS] <<framework>> #B0D6F9
+[Android] <<framework>> #B0D6F9
+[Firebase] <<framework>> #B0D6F9
+
+[iosGUI] <<app>> #B7FAC0
+[androidGUI] <<app>> #B7FAC0
+[Authentication] <<library>> #B7FAC0
+[Persistence] <<library>> #B7FAC0
+
+[Core] <<library>> #F2A49F
+[CoreAuth] <<library>> #F2A49F
+[CorePersist] <<library>> #F2A49F
+[CoreVideo] <<library>> #F2A49F
+[CoreLists] <<library>> #F2A49F
+[CoreXXX] <<library>> #F2A49F
+[CoreData] <<library>> #F9F8BF
+
+[Test] <<temp>> #Cornsilk
+
+[iOS] --> [iosGUI]
+[Android] --> [androidGUI]
+[Firebase] --> [Authentication]
+[Firebase] --> [Persistence]
+
+[iosGUI] --> [Core]
+[androidGUI] --> [Core]
+[Authentication] --> [Core]
+[Persistence] --> [Core]
+
+[Core] --> [CoreAuth]
+[Core] --> [CoreLists]
+[Core] --> [CorePersist]
+[Core] --> [CoreVideo]
+[Core] --> [CoreXXX]
+
+[CoreAuth] --> [CoreData]
+[CorePersist] --> [CoreData]
+[CoreVideo] --> [CoreData]
+[CoreLists] --> [CoreData]
+
+[CoreAuth] <.. [Test]
+[CorePersist] <.. [Test]
+[CoreVideo] <.. [Test]
+[CoreLists] <.. [Test]
+[CoreData] <.. [Test]
+
+note right of [Core] : Umbrella library
+note bottom of [CoreXXX] : TBD Use Cases
+note left of [Test] : Temp TDD\nsupport classes
+note left of [iosGUI] : MVP
+note right of [androidGUI] : MVVM
+#+end_src
+
+#+RESULTS:
+[[file:structure.png]]
