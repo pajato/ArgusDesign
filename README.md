@@ -6,6 +6,6 @@ The following documents are provided:
 
 + A usage narrative providing [the original vision](vision.org) for *Argus*
 
-+ A high level [component structure diagram](structure.org) showing the major modules. Note that the iOS and Android GUI modules are but minor details in the overall application scope. This is the inflience of Clean Architecture.
++ A high level [component structure diagram](structure.md) showing the major modules. Note that the iOS and Android GUI modules are but minor details in the overall application scope. This is the inflience of Clean Architecture.
 
 + tbd: use cases
