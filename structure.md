@@ -14,7 +14,7 @@ The `<<app>>` modules provide the GUI code for each platform in as minimal a fas
 
 The `<<library>>` modules for iOS are provided by Swift (Cocoa Touch) Frameworks (not to be confused with the iOS and Firebase framewoks) under the auspices of [Carthage](https://github.com/Carthage/Carthage#carthage--).
 
-For Android, the <<library>> modules are Kotlin libraries provided by Gradle and JitPack.
+For Android, the `<<library>>` modules are Kotlin libraries provided by Gradle and JitPack.
 
 In a very strong sense, the main (GUI) modules "plug in" to the Core. The Core can also be considered the Domain layer in the Clean Architecture sense.
 
