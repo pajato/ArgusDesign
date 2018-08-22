@@ -9,8 +9,8 @@ The following documents are provided:
 + A high level [component structure diagram](structure.md) showing the major modules. Note that the iOS and Android GUI modules are but minor details in the overall application scope. This is the influence of Clean Architecture.
 
 + Video use cases
-- register a video
-- update a video
-- find a video by id
-- find a video by name
-- find a video by fuzzy matching
+ - register a video
+ - update a video
+ - find a video by id
+ - find a video by name
+ - find a video by fuzzy matching
