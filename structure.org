@@ -9,7 +9,7 @@ At the center is the Core Data module, primarily consisting of Video and VideoLi
 
 The `<<app>>` modules provide the GUI code for each platform in as minimal a fashion as possible by invoking code in the core `<<library>>` modules to provide the main application features and functionality.
 
-Each `<<library>>` modules for iOS are provided by Swift (Cocoa Touch) Frameworks (not to be confused with the iOS and Firebase framewoks) under the auspices of [Carthage](https://github.com/Carthage/Carthage#carthage--).
+Each `<<library>>` modules for iOS are provided by Swift (Cocoa Touch) Frameworks (not to be confused with the iOS and Firebase framewoks) under the auspices of [[https://github.com/Carthage/Carthage#carthage--][Carthage]].
 
 For Android, the <<library>> modules are Kotlin libraries provided by JitPack.
 
@@ -17,4 +17,4 @@ In a very strong sense, the main (GUI) modules "plug in" to the Core. The Core c
 
 The _Core_ module acts as an umbrella to wrap the modules providing the core application functions. Each wrapped core module implements the Use Cases or provides the core data.
 
-[file:structure.png]
+[file:./structure.png]
