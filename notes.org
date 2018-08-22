@@ -1,6 +1,5 @@
 * High Level Component Structure Diagram
 #+begin_src plantuml :file structure.png
-title Argus Clean Application Structure
 
 legend top right
 <i>Layers Legend</i>
