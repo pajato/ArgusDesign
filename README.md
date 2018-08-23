@@ -9,7 +9,7 @@ The following documents are provided:
 + A high level [component structure diagram](structure.md) showing the major modules. Note that the iOS and Android GUI modules are but minor details in the overall application scope. This is the influence of Clean Architecture.
 
 * Video use cases
-   * register a video
+   * [register a video](https://github.com/pajato/ArgusDesign/blob/master/UseCases/video.org#use-case-register-a-video-of-interest)
    * update a video
    * find a video by id
    * find a video by name
