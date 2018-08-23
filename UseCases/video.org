@@ -1,0 +1,35 @@
+* Use Case: Register a video of interest.
+** Primary Actor: User
+** Timeframe: Immediate
+** Scope: App
+** Level: User Goal
+** Stakeholders and Interests
++ User is interested in capturing the attributes of a video to watch and track as part of one or more video lists, such
+  as Active List, Watched List, Wish List, My List, etc.
++ The App is tasked with protecting the content providers terms of service. In the event a content provider used by the
+  App to obtain information about a video has constraints on the use of the provided data, those constraints must be
+  honored by the App.
++ The App is tasked with protecting the User's risk in sharing any video information with other Users.
++ The Organization (Pajato Technologies LLC) is interested in generating income from the App while honoring the
+  conditions established by content providers.
++ Information providers are interested in ensuring that the information provided to a User is done according to the
+  terms of the associated information service.
++ Video content providers are interested in ensuring that the video is being used according to the terms of service
+  assocated with the video.
+** Precondition: none
+** Minimal Guarantee
+tbd
+** Success Guarantee
++ There is now one more video in the collection of videos (video repository) than existed prior to the successful
+  completion of the request.
+** Main Success Scenario
+1. The User specifies a name, type, provider and production info for a video to be registered with the app (system).
+2. The App verifies that there is no video matching the target video in the system already.
+3. The App creates a new Video object having a set of attributes (name; id; type, provider and production details).
+4. The App persists this video in the form of a creation event. (See Persistence Use Cases)
+** Extensions
++ 1a. The provided information will be validated returning a list of attribute errors in an error descriptor.
++ 2a. The App will use "fuzzy" matching to obtain a list of Video objects that may match the target video. When this
+  list is non-empty, the App will return the list in an error descriptor and terminate the Use Case.
++ 4a. A synchronous persistence failure will terminate the Use Case and return a suitable error descriptor.
++ more tbd.
