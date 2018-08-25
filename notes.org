@@ -1,5 +1,5 @@
 * High Level Component Structure Diagram
-#+begin_src plantuml :file structure.png
+#+begin_src plantuml :file highLevelComponentStructure.png
 
 legend top right
 <i>Layers Legend</i>
@@ -66,4 +66,84 @@ note right of [androidGUI] : MVVM
 #+end_src
 
 #+RESULTS:
-[[file:structure.png]]
+[[file:highLevelComponentStructure.png]]
+* Video Use Cases Class Structure
+#+begin_src plantuml :file videoUseCasesClassStructure.png
+title Argus Core Video Use Cases Class Structure
+
+package datamodel <<library>> #F9F8BF {
+
+  enum VideoType {
+    movie(MovieAttributes),
+    series(SeriesAttributes),
+    mini_series(SeriesAttributes)
+  }
+
+  enum VideoValue {
+    intValue(integer),
+    stringValue(string),
+    listValue(VideoValue),
+    error(string)
+  }
+
+  enum VideoResult {
+    normal(Video?)
+    error(string)
+  }
+
+  interface VideoAttributes {
+    + keys: list<string>
+    + values: map<string, VideoValue>
+    getAny(key) : VideoValue
+    getUsingValidKey(key: string) : VideoValue
+  }
+
+  interface VideoFinder {
+    findById(id: integer) : VideoResult
+    findByName(name: string) : VideoResult
+    findFuzzy(name: regexp, data: VideoAttributes) : list<Video>
+  }
+
+  interface VideoRegistrar {
+    register(name: string, data: VideoAttributes) : VideoResult
+    update(id: integer, data: VideoAttributes)
+  }
+
+  interface Video {
+    + id: integer
+    + name: string
+    + type: VideoType
+    getAttributes(type: VideoType) : VideoAttributes
+  }
+
+  VideoAttributes --> VideoValue
+  Video --> VideoType
+  Video --> VideoAttributes
+  VideoFinder --> VideoResult
+  VideoRegistrar --> VideoResult
+
+}
+
+package video <<library>> #F2A49F {
+
+  class VideoInteractor {
+    videoStore: list<Video>
+    set(persister: VideoRegistrar)
+  }
+
+}
+
+package persister <<library>> #B7FAC0 {
+  class VideoPersister
+}
+
+VideoPersister ..|> VideoRegistrar
+VideoInteractor ..|> VideoRegistrar
+VideoInteractor ..|> VideoFinder
+VideoInteractor --> Video
+
+
+#+end_src
+
+#+RESULTS:
+[[file:videoUseCasesClassStructure.png]]
