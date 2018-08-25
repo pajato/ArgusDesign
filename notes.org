@@ -142,7 +142,7 @@ VideoInteractor ..|> VideoRegistrar
 VideoInteractor ..|> VideoFinder
 VideoInteractor --> Video
 
-skinparam defaultFontSize 15
+skinparam defaultFontSize 18
 
 #+end_src
 
