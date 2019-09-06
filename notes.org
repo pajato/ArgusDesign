@@ -71,13 +71,9 @@ note right of [androidGUI] : MVVM
 #+begin_src plantuml :file videoUseCasesClassStructure.png
 title Argus Core Video Use Cases Class Structure
 
-package datamodel <<library>> #F9F8BF {
+package data <<library>> #F9F8BF {
 
-  enum VideoType {
-    movie(MovieAttributes),
-    series(SeriesAttributes),
-    mini_series(SeriesAttributes)
-  }
+  enum VideoType { error, movie, movieSeries, tvShow, tvSeries }
 
   enum VideoValue {
     intValue(integer),
@@ -109,12 +105,19 @@ package datamodel <<library>> #F9F8BF {
     update(id: integer, data: VideoAttributes)
   }
 
-  interface Video {
-    + id: integer
-    + name: string
+  abstract class Video {
     + type: VideoType
-    getAttributes(type: VideoType) : VideoAttributes
+    + data: Map<String, Attribute>
   }
+
+  class Movie(id: Int) : Video
+  class MovieSeries(id: Int) : Video
+  class TvShow(id: Int) : Video
+  class TvSeries(id: Int) : Video
+  class VideoError(key: ErrorKey) : Video
+}
+
+
 
   VideoAttributes --> VideoValue
   Video --> VideoType
